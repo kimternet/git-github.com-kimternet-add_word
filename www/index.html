@@ -9,7 +9,10 @@
 
     <!--Bootsrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Bootsrap icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     
     <!-- Particle js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
@@ -29,36 +32,65 @@
 
 </head>
 <body>
+    <div class="container">
+    
+    
+    
+        <section id ="Oval" class="mb-4" >    
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">                        
+                        <canvas id="canvasOne" width="700" height="420" style="position: absolute;"></canvas>      
+                        <div id="English">    
+                            <div class="square">
+                                <span class="circle"></span>
+                                <span class="circle"></span>
+                                <span class="circle"></span>    
+                            </div>    
+                        </div>    
+                    </div>
+                    </div><!--Ask me Now-->
+                    <h5 class="text-light text text-center tlt">AI와 함께하는 영어 회화</h5>
+    
+                    <div class="col-md-12 mt-4 pt-4">
+                        <div class="text-center">
+                            <div id="TextInput" class="d-flex">
+    
+                                <input type="text" class="input-field" name="chatbox" id="chatbox"  placeholder="type here ...">
+                                <button id="MicBtn" class="glow-on-hover"><i class="bi bi-mic"></i></button>
+                                <script type="text/javascript" src="/eel.js"></script>                                
+                                <button id="ChatBtn" class="glow-on-hover"><i class="bi bi-chat-dots"></i></button>
+                                <button id="SettingsBtn" class="glow-on-hover"><i class="bi bi-gear"></i></button>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </section>
 
-    <section id ="Oval" class="mb-4">
+        <section id="SiriWave" class="mb-4" hidden>
 
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
-                    
-                    <canvas id="canvasOne" width="700" height="420" style="position: absolute;"></canvas>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
 
-
-                    <div id="English">
-
-                        <div class="square">
-                            <span class="circle"></span>
-                            <span class="circle"></span>
-                            <span class="circle"></span>
+                            <div id="siri-container"></div>
 
                         </div>
-
                     </div>
-
                 </div>
-                </div><!--Ask me Now-->
-                <h5 class="text-light text text-center">당신의 영어를 돕는다...빠져든다..시작한다..</h5>
             </div>
-            <div class="col-md-1"></div>
-        </div>
 
-    </section>
+        </section>
+
+    </div>
+
+
+    
     <!--Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -68,6 +100,14 @@
     crossorigin="anonymous"></script>
 
     <!--particle js-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="script.js"></script>
+    
+    <!-- Siri wave -->
+    <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+    
+
     <script src="script.js"></script>
 
     <!--Texllate-->
